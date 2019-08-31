@@ -34,7 +34,7 @@ public class A1Jedi {
 				String name = scan.next();
 				for (int a=0; a<totalNoItems; a++) {
 					if (name.equals(itemList[a])) {
-						itemSold[a] = quantity;
+						itemSold[a] = itemSold[a] + quantity;
 						noCustomer[a] ++;
 					}
 				}
