@@ -29,17 +29,27 @@ public class A1Jedi {
 		for (int j = 0; j < totalNoCus; j++) {
 			customerList[j] = scan.next() + " " +scan.next();
 			int noItem = scan.nextInt();
+			int[] add = new int[totalNoItems];
 			for (int k =0; k<noItem; k++) {
 				int quantity = scan.nextInt();
 				String name = scan.next();
 				for (int a=0; a<totalNoItems; a++) {
 					if (name.equals(itemList[a])) {
 						itemSold[a] = itemSold[a] + quantity;
-						noCustomer[a] ++;
+						// noCustomer[a] ++;
+						add[a]++;
 					}
+					
 				}
 		
+			
+		}
+			for (int y=0; y < totalNoItems; y++) {
+				if (add[y] > 0) {
+					noCustomer[y]++;
+				}
 			}
+			
 		}
 		
 		for (int b = 0; b < totalNoItems; b++) {
@@ -49,7 +59,8 @@ public class A1Jedi {
 				System.out.println(noCustomer[b] + " customers bought " + itemSold[b] +" " + itemList[b]);
 			}
 		}
-	}
+	
+}
 }
 
 
