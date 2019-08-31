@@ -30,7 +30,7 @@ public class A1Novice {
 			}
 			
 			String finalPrice = String.format("%.2f", totalPrice);
-			System.out.println(firstName.charAt(0) + "."+ lastName + ":" + finalPrice);
+			System.out.println(firstName.charAt(0) + ". "+ lastName + ":" + finalPrice);
 					
 		}
 		
